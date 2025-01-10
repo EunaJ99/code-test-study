@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ8976 {
+public class BKJ8976 { // 올림픽
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count = sc.nextInt();

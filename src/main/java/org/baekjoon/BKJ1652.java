@@ -2,9 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ1652 {
-
-
+public class BKJ1652 { // 누울 자리를 찾아라
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

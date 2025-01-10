@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ11724 {
+public class BKJ11724 { // 연결 요소의 개수
     static boolean[] visited;
     static int[][] graph;
 

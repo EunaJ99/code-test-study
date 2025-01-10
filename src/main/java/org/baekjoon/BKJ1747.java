@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ1747 {
+public class BKJ1747 { // 소수 & 팰린드롬
     public static boolean isPrime(int n){
         for (int i = 2; i <= Math.sqrt(n); i++){
             if (n % i == 0){

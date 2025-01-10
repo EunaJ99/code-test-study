@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ2606 {
+public class BKJ2606 { // 바이러스
     static boolean[] visited;
     static int[][] graph;
 

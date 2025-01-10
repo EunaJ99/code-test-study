@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ2816 {
+public class BKJ2816 { // 디지털 티비
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

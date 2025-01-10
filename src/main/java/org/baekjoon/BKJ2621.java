@@ -2,7 +2,7 @@ package org.baekjoon;
 
 import java.util.*;
 
-public class BKJ2621 {
+public class BKJ2621 { // 카드게임
     public static boolean isColorSame(char[] color) {
         for (int i = 1; i < 5; i++) {
             if (color[i] != color[i-1]) { return false; }
