@@ -4,7 +4,7 @@ import java.util.*;
 
 public class BKJ2606 {
     static boolean[] visited;
-    static ArrayList<ArrayList<Integer>> graph;
+    static int[][] graph;
 
     public static void main(String[] args) {
         BKJ2606 m = new BKJ2606();
@@ -12,16 +12,13 @@ public class BKJ2606 {
         int nodeCount = sc.nextInt();
         int edgeCount = sc.nextInt();
         visited = new boolean[nodeCount + 1];
-        graph = new ArrayList<>();
-        for (int i = 0; i <= nodeCount; i++) {
-            graph.add(new ArrayList<>());
-        }
+        graph = new int[nodeCount+1][nodeCount+1];
 
         for (int i = 0; i < edgeCount; i++) {
             int firstNode = sc.nextInt();
             int secondNode = sc.nextInt();
-            graph.get(firstNode).add(secondNode);
-            graph.get(secondNode).add(firstNode);
+            graph[firstNode][secondNode] = 1;
+            graph[secondNode][firstNode] = 1;
         }
 
         m.DFS(1);
@@ -34,11 +31,12 @@ public class BKJ2606 {
     }
 
     void DFS(int n) {
+        if (visited[n]) { return; }
         visited[n] = true;
-        ArrayList<Integer> temp = graph.get(n);
-        for (int i : temp) {
-            if (visited[i]) { continue; }
-            DFS(i);
+        for (int i = 1; i < visited.length; i++) {
+            if (graph[n][i] == 1 && !visited[i]) {
+                DFS(i);
+            }
         }
     }
 }
